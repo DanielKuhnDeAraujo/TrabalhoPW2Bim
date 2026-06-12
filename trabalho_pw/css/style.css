@@ -1,0 +1,264 @@
+:root {
+    --laranja: #ff4800;
+    --laranja-escuro: #ff6600;
+    --laranja-claro: #ff2600;
+    --cinza-texto: #4a4a4a;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--cinza-texto);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.header-laranja {
+    background-color: var(--laranja);
+    color: white;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.header-laranja h3 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.header-laranja .header-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.header-laranja .header-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: auto;
+}
+
+.header-laranja form {
+    margin: 0;
+}
+
+.header-laranja .form-control {
+    border: none;
+}
+
+.header-laranja .form-control::placeholder {
+    color: #b35a00;
+}
+
+.header-laranja .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.4);
+}
+
+.header-laranja .btn-pesquisar {
+    background-color: white;
+    color: var(--laranja);
+}
+
+.header-laranja .btn-pesquisar:hover {
+    background-color: white;
+    color: var(--laranja-escuro);
+}
+
+.header-laranja .btn-incluir {
+    background-color: white;
+    color: var(--laranja);
+    white-space: nowrap;
+}
+
+.header-laranja .btn-incluir:hover {
+    background-color: var(--laranja-claro);
+    color: white
+}
+
+.conteudo-card {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+}
+
+.btn-incluir {
+    background-color: var(--laranja);
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-incluir:hover {
+    background-color: var(--laranja-escuro);
+    color: white;
+}
+
+.form-control:focus {
+    border-color: var(--laranja);
+    box-shadow: 0 0 0 0.2rem rgba(255, 122, 0, 0.2);
+}
+
+.btn-pesquisar {
+    background-color: var(--laranja);
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-pesquisar:hover {
+    background-color: var(--laranja-escuro);
+    color: var(--laranja-claro);
+}
+
+.table-revistas {
+    background-color: white;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-revistas thead th {
+    background-color: var(--laranja);
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+.table-revistas thead tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.table-revistas thead tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.table-revistas tbody tr:last-child {
+    border-bottom: 2px solid var(--laranja);
+}
+
+.table-revistas tbody tr:hover {
+    background-color: var(--laranja-claro);
+}
+
+.table-revistas tbody td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+.centraliza {
+    text-align: center;
+}
+
+.foto {
+    width: 80px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+
+.btn-visualizar,
+.btn-editar {
+    background-color: var(--laranja);
+    border: none;
+    color: white;
+    font-weight: 600;
+}
+
+.btn-visualizar:hover,
+.btn-editar:hover {
+    background-color: var(--laranja-escuro);
+    color: white;
+}
+
+.btn-apagar {
+    background-color: white;
+    border: 1px solid var(--laranja);
+    color: var(--laranja);
+    font-weight: 600;
+}
+
+.btn-apagar:hover {
+    background-color: var(--laranja);
+    color: white;
+}
+
+.header-laranja .btn-voltar {
+    background-color: #ffffff;
+    color: var(--laranja);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.header-laranja .btn-voltar:hover {
+    background-color: var(--laranja-claro);
+    color: var(--laranja-escuro);
+}
+
+.btn-salvar {
+    background-color: var(--laranja);
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-salvar:hover {
+    background-color: var(--laranja-escuro);
+    color: #ffffff;
+}
+
+.btn-limpar {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    color: var(--cinza-texto);
+    font-weight: 600;
+}
+
+.btn-limpar:hover {
+    background-color: #f0f0f0;
+}
+
+.btn-cancelar {
+    background-color: #ffffff;
+    border: 1px solid var(--laranja);
+    color: var(--laranja);
+    font-weight: 600;
+}
+
+.btn-cancelar:hover {
+    background-color: var(--laranja);
+    color: #ffffff;
+}
+
+.btn-apagar-confirmar {
+    background-color: var(--laranja);
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-apagar-confirmar:hover {
+    background-color: var(--laranja-escuro);
+    color: #ffffff;
+}
+
+.acoes-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.foto-detalhe {
+    width: 100%;
+    max-width: 220px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
