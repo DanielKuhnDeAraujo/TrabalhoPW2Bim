@@ -47,13 +47,7 @@
                     $ano = $dados['ano'];
                     $edicao = $dados['edicao'];
                     $datacadastro = $dados['datacadastro'];
-                    $valor = "R$ " . number_format($dados["valor"], 2, ",", ".");
-                // buscando a na pasta imagem
-                if (empty($dados['imagem'])) {
-                    $imagem = "SemImagem.png";
-                } else {
-                    $imagem = $dados['imagem'];
-                }
+                    $foto = empty($dados['foto']) ? "SemImagem.png" : $dados['foto'];
             } else {
                 throw new Exception("Produto não encontrado!");
             }
