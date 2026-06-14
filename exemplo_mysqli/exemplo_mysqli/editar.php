@@ -104,6 +104,19 @@ try {
             <a href="index.php" class="btn btn-primary">Cancelar</a>
         </form>
     </main>
+    <script>
+        document.getElementById('imagemnova').addEventListener('change', function (event) {
+            const file = event.target.files[0]; // Pega o primeiro arquivo selecionado
+
+            // Cria um objeto URL temporário para exibir a imagem
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const img = document.getElementById('preview');
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file); // Lê o arquivo como Base64
+        });
+    </script>
 </body>
 
 </html>

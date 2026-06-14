@@ -68,15 +68,17 @@
                     <div class="col-md-4 col-lg-3">
                         <img src="img/<?= htmlspecialchars($foto); ?>" class="foto-detalhe img-fluid img-thumbnail shadow" alt="<?= htmlspecialchars($nome); ?>">
                     </div>
-                    <div class="col-md-8 col-lg-9">
-                        <h4><?= htmlspecialchars($nome); ?></h4>
-                        <p class="mb-1"><strong>Ano:</strong> <?= $ano; ?></p>
-                        <p class="mb-1"><strong>Edição:</strong> <?= $edicao; ?></p>
-                        <p class="mb-3"><strong>Cadastrado em:</strong> <?= $datacadastro; ?></p>
+                    <div class="col-md-8 col-lg-9 d-flex align-items-center">
+                        <div class="">
+                            <h4><?= htmlspecialchars($nome); ?></h4>
+                            <p class="mb-1"><strong>Ano:</strong> <?= $ano; ?></p>
+                            <p class="mb-1"><strong>Edição:</strong> <?= $edicao; ?></p>
+                            <p class="mb-3"><strong>Cadastrado em:</strong> <?= $datacadastro; ?></p>
 
-                        <div class="acoes-form">
-                            <a href="editar.php?id=<?= base64_encode($id); ?>" class="btn btn-editar">Editar</a>
-                            <a href="index.php" class="btn btn-cancelar">Voltar</a>
+                            <div class="acoes-form">
+                                <a href="editar.php?id=<?= base64_encode($id); ?>" class="btn btn-editar">Editar</a>
+                                <a href="index.php" class="btn btn-cancelar">Voltar</a>
+                            </div>
                         </div>
                     </div>
                 </div>
