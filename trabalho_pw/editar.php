@@ -117,7 +117,7 @@
                     </div>
                     <div class="col-md-2">
                         <p class="mb-1">Pré-visualização:</p>
-                        <img src="img/<?= htmlspecialchars($foto); ?>" id="preview" class="foto img-thumbnail shadow" alt="<?= htmlspecialchars($nome); ?>">
+                        <img src="img/<?= htmlspecialchars($foto); ?>" id="preview" class="foto shadow" alt="<?= htmlspecialchars($nome); ?>">
                     </div>
                 </div>
 

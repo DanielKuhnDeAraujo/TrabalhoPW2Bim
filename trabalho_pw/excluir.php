@@ -30,7 +30,7 @@
                 header("Location: index.php");
             }
 
-            $sql = "delete from tabelaimg where id=$id";
+            $sql = "delete from tabelarevista where id=$id";
 
             $resultado = $conexao->query($sql);
 
