@@ -14,12 +14,14 @@
 
     <div class="header-laranja">
         <div class="container header-conteudo">
-            <h3>Editar Revista</h3>
+            <a style="margin: 0;font-weight: 700;letter-spacing: 0.5px;white-space: nowrap;color: white;text-decoration: none;" href="index.php">
+                <h3 >Editar Revista</h3>
+            </a>
         </div>
     </div>
 
     <main class="container">
-
+        <a href=""></a>
         <div class="conteudo-card">
 
             <?php
