@@ -32,7 +32,6 @@
             try {
                 include "conexao.php";
 
-                // verifica se o parâmetro da URL é válido
                 if (isset($_GET['id']) && is_numeric(base64_decode($_GET['id']))) {
                     $id = base64_decode($_GET['id']);
                 } else {
@@ -48,7 +47,7 @@
                     $nome = $dados['nome'];
                     $ano = $dados['ano'];
                     $edicao = $dados['edicao'];
-                    $datacadastro = $dados['datacadastro'];
+                    $datacadastro = date('d/m/Y', strtotime($dados['datacadastro']));
                     $foto = empty($dados['foto']) ? "SemImagem.png" : $dados['foto'];
             } else {
                 throw new Exception("Produto não encontrado!");

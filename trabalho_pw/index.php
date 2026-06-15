@@ -60,7 +60,7 @@
                                     <th>Nome</th>
                                     <th width="80px" class="centraliza">Ano</th>
                                     <th width="80px" class="centraliza">Edição</th>
-                                    <th width="150px">Data Cadastro</th>
+                                    <th width="150px">Cadastro</th>
                                     <th width="160px" class="centraliza">Foto</th>
                                     <th width="250px">Ações</th>
                                 </tr>
@@ -83,7 +83,7 @@
                         echo "\t\t\t\t\t\t<td>" . htmlspecialchars($dados['nome']) . "</td>\n";
                         echo "\t\t\t\t\t\t<td class=\"centraliza\">" . $dados['ano'] . "</td>\n";
                         echo "\t\t\t\t\t\t<td class=\"centraliza\">" . $dados['edicao'] . "</td>\n";
-                        echo "\t\t\t\t\t\t<td>" . $dados['datacadastro'] . "</td>\n";
+                        echo "\t\t\t\t\t\t<td>" . date('d/m/Y', strtotime($dados['datacadastro'])) . "</td>\n";
                         echo "\t\t\t\t\t\t<td class=\"centraliza\">
                             <a href=\"verproduto.php?id=$id\">
                                 <img src=\"img/$imagem\" class=\"foto shadow\" alt=\"{$dados['nome']}\">

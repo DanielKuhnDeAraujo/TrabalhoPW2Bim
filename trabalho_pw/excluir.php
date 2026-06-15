@@ -35,12 +35,9 @@
             $resultado = $conexao->query($sql);
 
             echo <<<ALERT
-                <div class="alert alert-info container alert-dismissible fade show" role="alert">
-                    <h2>Aconteceu um erro:<br>
-                        Excluido com sucesso!
-                    </h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                    <a href="index.php" class="btn btn-primary">Voltar</a>
+                <div class="alert mt-5 text-center" style="background-color: #fff4f0; border: 1px solid #ff4800; border-radius: 10px; padding: 2rem;" role="alert">
+                    <h4 style="color: #ff4800; font-weight: 700;">Revista excluída com sucesso!</h4>
+                    <a href="index.php" class="btn btn-cancelar mt-2">Voltar</a>
                 </div>\n
             ALERT;
         } catch (Exception $e) {
