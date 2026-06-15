@@ -193,6 +193,35 @@ body {
     color: white;
 }
 
+.acoes-td {
+    white-space: nowrap;
+}
+
+.acoes-td .btn {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+}
+
+@media (max-width: 767px) {
+    .col-oculta-mobile {
+        display: none;
+    }
+
+    .foto {
+        width: 70px;
+    }
+
+    .acoes-td {
+        white-space: normal;
+    }
+
+    .acoes-td .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+}
+
 .header-laranja .btn-voltar {
     background-color: #ffffff;
     color: var(--laranja);
@@ -262,4 +291,5 @@ body {
     width: 100%;
     border: 1px solid #eee;
     border-radius: 6px;
+    margin-bottom: 1rem;
 }

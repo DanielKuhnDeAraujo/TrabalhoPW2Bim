@@ -9,9 +9,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
-    <style>
-        
-    </style>
 </head>
 
 <body>
@@ -23,8 +20,8 @@
             <div class="header-acoes">
                 <form action="#" method="post" class="d-flex">
                     <div class="input-group">
-                        <input type="search" size="30" maxlength="50" placeholder="Pesquisar por nome..."
-                            id="busca" name="filtro" class="form-control">
+                        <input type="search" size="30" maxlength="50" placeholder="Pesquisar por nome..." id="busca"
+                            name="filtro" class="form-control">
                         <input type="submit" value="Pesquisar" class="btn btn-pesquisar">
                     </div>
                 </form>
@@ -35,9 +32,7 @@
     </div>
 
     <main class="container">
-
         <div class="conteudo-card">
-
             <div class="table-responsive">
                 <?php
                 try {
@@ -57,11 +52,11 @@
                         <table class="table table-revistas align-middle">
                             <thead>
                                 <tr>
-                                    <th width="50px" class="centraliza">Id</th>
+                                    <th width="50px" class="centraliza col-oculta-mobile">Id</th>
                                     <th>Nome</th>
-                                    <th width="80px" class="centraliza">Ano</th>
-                                    <th width="80px" class="centraliza">Edição</th>
-                                    <th width="150px">Cadastro</th>
+                                    <th width="80px" class="centraliza col-oculta-mobile">Ano</th>
+                                    <th width="80px" class="centraliza col-oculta-mobile">Edição</th>
+                                    <th width="150px" class="col-oculta-mobile">Cadastro</th>
                                     <th width="160px" class="centraliza">Foto</th>
                                     <th width="250px">Ações</th>
                                 </tr>
@@ -80,18 +75,18 @@
                         $id = base64_encode($dados['id']);
 
                         echo "\t\t\t\t\t<tr>\n";
-                        echo "\t\t\t\t\t\t<td class=\"centraliza\">{$dados['id']}</td>\n";
+                        echo "\t\t\t\t\t\t<td class=\"centraliza col-oculta-mobile\">{$dados['id']}</td>\n";
                         echo "\t\t\t\t\t\t<td>" . htmlspecialchars($dados['nome']) . "</td>\n";
-                        echo "\t\t\t\t\t\t<td class=\"centraliza\">" . $dados['ano'] . "</td>\n";
-                        echo "\t\t\t\t\t\t<td class=\"centraliza\">" . $dados['edicao'] . "</td>\n";
-                        echo "\t\t\t\t\t\t<td>" . date('d/m/Y', strtotime($dados['datacadastro'])) . "</td>\n";
+                        echo "\t\t\t\t\t\t<td class=\"centraliza col-oculta-mobile\">" . $dados['ano'] . "</td>\n";
+                        echo "\t\t\t\t\t\t<td class=\"centraliza col-oculta-mobile\">" . $dados['edicao'] . "</td>\n";
+                        echo "\t\t\t\t\t\t<td class=\"col-oculta-mobile\">" . date('d/m/Y', strtotime($dados['datacadastro'])) . "</td>\n";
                         echo "\t\t\t\t\t\t<td class=\"centraliza\">
                             <a href=\"verproduto.php?id=$id\">
                                 <img src=\"img/$imagem\" class=\"foto shadow\" alt=\"{$dados['nome']}\">
                             </a>
                         </td>\n";
 
-                        echo "\t\t\t\t\t\t<td>
+                        echo "\t\t\t\t\t\t<td class=\"acoes-td\">
                             <a href=\"verproduto.php?id=$id\" class=\"btn btn-sm btn-visualizar\">
                                 Visualizar
                             </a>&nbsp;
@@ -116,9 +111,7 @@
                 }
                 ?>
             </div>
-
         </div>
-
     </main>
 
     <?php include "modal.php"; ?>

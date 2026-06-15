@@ -14,14 +14,14 @@
 
     <div class="header-laranja">
         <div class="container header-conteudo">
-            <a style="margin: 0;font-weight: 700;letter-spacing: 0.5px;white-space: nowrap;color: white;text-decoration: none;" href="index.php">
-                <h3 >Incluir Revista</h3>
+            <a style="margin: 0;font-weight: 700;letter-spacing: 0.5px;white-space: nowrap;color: white;text-decoration: none;"
+                href="index.php">
+                <h3>Incluir Revista</h3>
             </a>
         </div>
     </div>
 
     <main class="container">
-
         <div class="conteudo-card">
 
             <?php
@@ -67,7 +67,8 @@
 
                 <div class="row">
                     <div class="col-md-4 col-lg-3">
-                        <img src="img/SemImagem.png" id="preview" class="foto-detalhe img-fluid img-thumbnail shadow" alt="sem imagem">
+                        <img src="img/SemImagem.png" id="preview" class="foto-detalhe img-fluid img-thumbnail shadow"
+                            alt="sem imagem">
                     </div>
                     <div class="col-md-8 col-lg-9 d-flex align-items-center">
                         <div class="w-100">
@@ -109,7 +110,6 @@
             </form>
 
         </div>
-
     </main>
     <script>
         document.getElementById('imagemnova').addEventListener('change', function (event) {
