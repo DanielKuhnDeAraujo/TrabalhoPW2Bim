@@ -32,6 +32,7 @@
                     $nome = $_POST['nome'];
                     $ano = $_POST['ano'];
                     $edicao = $_POST['edicao'];
+                    $descricao = $_POST['descricao'];
 
                     if (!empty($_FILES['foto']['name'])) {
                         $target_dir = "img/";
@@ -42,8 +43,8 @@
                         $arquivo = "";
                     }
 
-                    $sql = "insert into tabelarevista (nome, ano, edicao, foto, datacadastro) 
-                            values ('" . htmlspecialchars($nome) . "', $ano, $edicao, '$arquivo', now())";
+                    $sql = "insert into tabelarevista (nome, ano, edicao, foto, descricao, datacadastro) 
+                            values ('" . htmlspecialchars($nome) . "', $ano, $edicao, '$arquivo', '" . htmlspecialchars($descricao) . "', now())";
 
                     $conexao->query($sql);
 
@@ -84,6 +85,11 @@
                                     <label class="form-label">Edição</label>
                                     <input type="number" name="edicao" class="form-control" required>
                                 </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Descrição</label>
+                                <textarea name="descricao" class="form-control" rows="3" maxlength="1000"></textarea>
                             </div>
 
                             <div class="mb-4">

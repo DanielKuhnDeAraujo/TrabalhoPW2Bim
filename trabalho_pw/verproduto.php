@@ -49,6 +49,7 @@
                     $edicao = $dados['edicao'];
                     $datacadastro = date('d/m/Y', strtotime($dados['datacadastro']));
                     $foto = empty($dados['foto']) ? "SemImagem.png" : $dados['foto'];
+                    $descricao = $dados['descricao'];
             } else {
                 throw new Exception("Produto não encontrado!");
             }
@@ -75,6 +76,9 @@
                             <p class="mb-1"><strong>Ano:</strong> <?= $ano; ?></p>
                             <p class="mb-1"><strong>Edição:</strong> <?= $edicao; ?></p>
                             <p class="mb-3"><strong>Cadastrado em:</strong> <?= $datacadastro; ?></p>
+                            <?php if (!empty($descricao)): ?>
+                            <p class="mb-3"><strong>Descrição:</strong><br><?= nl2br(htmlspecialchars($descricao)); ?></p>
+                            <?php endif; ?>
 
                             <div class="acoes-form">
                                 <a href="editar.php?id=<?= base64_encode($id); ?>" class="btn btn-editar">Editar</a>

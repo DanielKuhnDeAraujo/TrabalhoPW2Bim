@@ -51,12 +51,14 @@
                     $ano = $dados['ano'];
                     $edicao = $dados['edicao'];
                     $foto = empty($dados['foto']) ? "SemImagem.png" : $dados['foto'];
+                    $descricao = $dados['descricao'];
                 } else {
                     // recuperando os dados enviados pelo formulário
                     $nome = $_POST['nome'];
                     $ano = $_POST['ano'];
                     $edicao = $_POST['edicao'];
                     $foto = $_POST['fotoatual'];
+                    $descricao = $_POST['descricao'];
 
                     // se uma nova imagem foi enviada, substitui a foto atual
                     if (!empty($_FILES['foto']['name'])) {
@@ -69,7 +71,7 @@
 
                     // criando a linha do UPDATE
                     $sql = "update tabelarevista set nome='" . htmlspecialchars($nome) . "', 
-                            ano=$ano, edicao=$edicao, foto='$foto' where id=$id";
+                            ano=$ano, edicao=$edicao, foto='$foto', descricao='" . htmlspecialchars($descricao) . "' where id=$id";
 
                     $conexao->query($sql);
 
@@ -113,6 +115,11 @@
                                     <label class="form-label">Edição</label>
                                     <input type="number" name="edicao" class="form-control" required value="<?= $edicao; ?>">
                                 </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Descrição</label>
+                                <textarea name="descricao" class="form-control" rows="3" maxlength="1000"><?= htmlspecialchars($descricao); ?></textarea>
                             </div>
 
                             <div class="mb-4">

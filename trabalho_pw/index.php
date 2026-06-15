@@ -8,6 +8,7 @@
     <link rel="icon" type="image/icon" href="img/icon.png">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <style>
         
     </style>
@@ -17,7 +18,7 @@
 
     <div class="header-laranja">
         <div class="container header-conteudo">
-            <h3>Revistas</h3>
+            <h3 class="logo">QuadriVerse</h3>
 
             <div class="header-acoes">
                 <form action="#" method="post" class="d-flex">
